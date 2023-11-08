@@ -1,9 +1,5 @@
 import React from "react";
 
-// For the Business component, create a hardcoded business that can be used to generate a list of fake businesses and simulate the website’s functionality.
-
-// Eventually, the hardcoded business will be replaced with dynamic data retrieved from the Yelp API.
-
 const sampleBusiness = {
   imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
   name: "TinTin & LuLu",
