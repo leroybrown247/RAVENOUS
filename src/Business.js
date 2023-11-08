@@ -5,30 +5,36 @@ import React from "react";
 // Eventually, the hardcoded business will be replaced with dynamic data retrieved from the Yelp API.
 
 const sampleBusiness = {
-    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90,
-  };  
+  imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+  name: "TinTin & LuLu",
+  address: "101 Taniwha Street",
+  city: "Auckland",
+  state: "Glen Innes",
+  zipCode: "1072",
+  category: "Maori Cuisine",
+  rating: 5,
+  reviewCount: 100,
+};
 
 const Business = () => {
   return (
     <div className="Business">
       <div className="image-container">
-        <img src="placeholder" alt="resturaunt" />
+        <img src={sampleBusiness.imageSrc} alt={sampleBusiness.name} />
       </div>
-      <h2>Business Name</h2>
-      <div className="Business-Info">
-        <p>101 Taniwha Street</p>
-        <p>Glen Innes, Auckland 1072</p>
-        <h3>Catagory</h3>
-        <h3 className="rating">5 Stars</h3>
-        <p>100 reviews</p>
+      <h2>{sampleBusiness.name}</h2>
+      <div className="Business-info">
+        <div className="Business-address">
+          <p>{sampleBusiness.address}</p>,{" "}
+          <p>
+            {sampleBusiness.state} {sampleBusiness.zipCode}
+          </p>
+        </div>
+        <div className="Business-reviews">
+          <h3>{sampleBusiness.category}</h3>
+          <h3 className="rating">{sampleBusiness.rating} Stars</h3>
+          <p>{sampleBusiness.reviewCount} reviews</p>
+        </div>
       </div>
     </div>
   );
