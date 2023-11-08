@@ -12,6 +12,11 @@ const Business = () => {
       <div className="image-container">
         <img src="placeholder" alt="resturaunt" />
       </div>
+      <h2>Business Name</h2>
+      <div className="Business-Info">
+        <p>101 Taniwha Street</p>
+        <p>Glen Innes, Auckland 1072</p>
+      </div>
     </div>
   );
 };
