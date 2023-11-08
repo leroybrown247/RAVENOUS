@@ -7,11 +7,13 @@ import React from "react";
 // Create the Business Component Function
 
 const Business = () => {
-    return (
-        <div className="Business"> 
-
-        </div>
-    )
-}
+  return (
+    <div className="Business">
+      <div className="image-container">
+        <img src="placeholder" alt="resturaunt" />
+      </div>
+    </div>
+  );
+};
 
 export default Business;
