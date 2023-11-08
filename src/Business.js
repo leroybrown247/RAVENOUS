@@ -1,10 +1,20 @@
 import React from "react";
 
-// Create a Business component. The component will represent how a business (a restaurant) in Ravenous will be formatted and styled.
+// For the Business component, create a hardcoded business that can be used to generate a list of fake businesses and simulate the website’s functionality.
 
-// Each Business component should display an image, name, address, city, state, zipcode, category, rating, and review count.
+// Eventually, the hardcoded business will be replaced with dynamic data retrieved from the Yelp API.
 
-// Create the Business Component Function
+const sampleBusiness = {
+    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
+    name: 'MarginOtto Pizzeria',
+    address: '1010 Paddington Way',
+    city: 'Flavortown',
+    state: 'NY',
+    zipCode: '10101',
+    category: 'Italian',
+    rating: 4.5,
+    reviewCount: 90,
+  };  
 
 const Business = () => {
   return (
