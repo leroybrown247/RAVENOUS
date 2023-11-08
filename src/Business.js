@@ -16,6 +16,9 @@ const Business = () => {
       <div className="Business-Info">
         <p>101 Taniwha Street</p>
         <p>Glen Innes, Auckland 1072</p>
+        <h3>Catagory</h3>
+        <h3 className="rating">5 Stars</h3>
+        <p>100 reviews</p>
       </div>
     </div>
   );
