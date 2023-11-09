@@ -28,7 +28,7 @@ const SearchBar = () => {
           <input placeholder="Where?" />
         </div>
         <div className="SearchBar-submit">
-          <a>Let's Push!</a>
+          <button>Let's Push!</button>
         </div>
       </div>
     </div>
