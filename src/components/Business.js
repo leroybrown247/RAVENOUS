@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "react-bootstrap"
 
 const sampleBusiness = {
   imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
