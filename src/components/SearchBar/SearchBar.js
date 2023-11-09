@@ -24,6 +24,7 @@ const SearchBar = () => {
         <div className="SearchBar-submit">
           <a>Let's Push!</a>
         </div>
+
       </div>
     </div>
   );
