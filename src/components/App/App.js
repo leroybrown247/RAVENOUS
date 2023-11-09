@@ -1,19 +1,21 @@
-import "./App.css";
-import BusinessList from "../BusinessList";
-import SearchBar from "../SearchBar/SearchBar";
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>ravenous</h1>
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
       </header>
-      <main>
-        <SearchBar />
-        <BusinessList />
-      </main>
-      <footer>{/*placeholder*/}</footer>
-    </div>
   );
 }
 

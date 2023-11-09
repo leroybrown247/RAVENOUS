@@ -1,8 +1,5 @@
 import React from "react";
-import Business from "./Business";
-
-// Create a BusinessList component that displays a collection of businesses.
-// The BusinessList component should utilize the Business component multiple times to generate the list.
+import Business from "../Business/Business";
 
 const business = [
   {

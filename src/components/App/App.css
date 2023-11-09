@@ -1,3 +1,4 @@
+
 @import '../../styles/styles.css';
 
 .App {
@@ -5,16 +6,16 @@
 }
 
 .App-header {
-  background-color: var(--primary);
-  min-height: 5vh;
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: var(--pure);
+  color: white;
 }
 
 .App-link {
-  color: var(--primary);
+  color: #61dafb;
 }
