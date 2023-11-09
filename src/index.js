@@ -4,6 +4,10 @@ import './index.css';
 import App from '../src/components/App/App'
 import reportWebVitals from './reportWebVitals';
 
+// Import react bootstrap and configure
+import '../node_modules/react-bootstrap/dist/react-bootstrap'
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
