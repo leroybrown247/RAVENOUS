@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./SearchBar.module.css"
 
 const sortingOptions = {
   "Best Match": "best_match",
@@ -9,25 +10,29 @@ const sortingOptions = {
 const SearchBar = () => {
   return (
     <div>
-      <div className="SearchBar">
-        <div className="SearchBar-sort-options">
+      <div className={styles.SearchBar}>
+        <div className={styles["SearchBar-sort-options"]}>
           <ul>
             {Object.keys(sortingOptions).map((option) => (
               <li key={sortingOptions[option]}>{option}</li>
             ))}
           </ul>
         </div>
-        <div className="SearchBar-fields">
-          <input placeholder="Search Businesses" />
-          <input placeholder="Where?" />
-        </div>
-        <div className="SearchBar-submit">
-          <a>Let's Push!</a>
-        </div>
+        <div className={styles["divider-class"]}>
 
+        <hr className={styles["divider"]} />
+
+        </div>
+        <div className={styles["SearchBar-fields"]}>
+          <input placeholder="Find your experience!" />
+          <input placeholder="Keyword : ( ie . BBQ )" />
+        </div>
+        <div className={styles["SearchBar-submit"]}>
+          <button className={styles["button"]}>Let's Push</button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default SearchBar
+export default SearchBar;

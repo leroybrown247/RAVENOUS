@@ -1,5 +1,6 @@
 import React from "react";
 import Business from "../Business/Business";
+import styles from "./BusinessList.module.css"
 
 const business = [
   {
@@ -18,7 +19,7 @@ const business = [
 
 const BusinessList = () => {
   return (
-    <div className="BusinessList">
+    <div className={styles.BusinessList}>
       {business.map((business, index) => (
         <Business key={index} business={business} />
       ))}

@@ -1,0 +1,62 @@
+/* ==========================================================================
+	 Base Styles
+	 ========================================================================== */
+
+:root {
+  --primary: #c39948;
+  --pure: #ffffff;
+  --dark: #232323;
+  --paragraph: #9d8189;
+  --background: #bababa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--dark);
+  font-family: "Roboto", sans-serif;
+}
+
+body h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+body h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+body h2 {
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+body h1 {
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+span {
+  color: var(--primary);
+}
+
+body p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--paragraph);
+}

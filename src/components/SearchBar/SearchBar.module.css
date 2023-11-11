@@ -1,7 +1,6 @@
-@import '../../styles/styles.css';
-
 .SearchBar {
   min-height: 50vh;
+  background-image: url('ravenous.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -10,25 +9,60 @@
   justify-content: center;
 }
 
-.SearchBar-sort-options {
-  margin: 10px;
+.SearchBar-sort-options li {
+  display: inline;
+  margin: 2rem;
+  color: var(--pure);
+  font-size: calc(3px + 2vmin);
+}
+
+.SearchBar-sort-options li:hover {
+  cursor: pointer;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.divider-class {
+  margin-bottom: 10px;
+}
+
+.divider {
+  border: none;
+  width: 500px;
+  height: 1px;
+  background-color: var(--pure);
+  margin: 10px 0;
+  opacity: 60%;
+}
+
+.SearchBar-fields {
   margin-bottom: 20px;
 }
 
-.sort-button {
-  margin-left: 20px;
-}
-
 .SearchBar-fields input {
-  width: 100%;
-  margin-bottom: 10px;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 120px;
   margin-left: 10px;
+  font-family: 'Satisfy', cursive;
+  border-width: 0;
+  border-radius: 2px;
 }
 
-.SearchBar-submit {
-  text-align: center;
+.button {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: var(--pure);
+  background: var(--primary);
+  font-family: 'Roboto', sans-serif;
+  border-radius: 2px;
 }
 
-.backgroundStyle {
-  width: 100%;
+.button:hover {
+  color: var(--pure);
+  background: var(--dark);
+  transition: all 0.3s ease;
 }
