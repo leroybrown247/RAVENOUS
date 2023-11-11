@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Business.module.css"
 
 const sampleBusiness = {
   imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
@@ -14,7 +15,7 @@ const sampleBusiness = {
 
 const Business = () => {
   return (
-    <div className="Business">
+    <div className={styles.Business}>
       <div className="image-container">
         <img src={sampleBusiness.imageSrc} alt={sampleBusiness.name} />
       </div>

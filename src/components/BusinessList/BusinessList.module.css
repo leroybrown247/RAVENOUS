@@ -1,6 +1,12 @@
 .BusinessList {
   display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 15rem;
+  margin: 2rem auto;
+  padding: 1rem 5rem;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: -10px; /* To offset the Business margins */
+  justify-content: center;
+  background-color: var(--pure);
 }
