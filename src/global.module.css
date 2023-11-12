@@ -54,9 +54,7 @@ span {
 }
 
 body p {
-  font-size: 1.2rem;
-  line-height: 1.4;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 12px;
+  line-height: 0.4rem;
   color: var(--paragraph);
 }
