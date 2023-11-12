@@ -11,24 +11,24 @@ const SearchBar = () => {
   return (
     <div>
       <div className={styles.SearchBar}>
-        <div className={styles["SearchBar-sort-options"]}>
+        <div className={styles["SearchBarSortOptions"]}>
           <ul>
             {Object.keys(sortingOptions).map((option) => (
               <li key={sortingOptions[option]}>{option}</li>
             ))}
           </ul>
         </div>
-        <div className={styles["divider-class"]}>
+        <div className={styles["DividerClass"]}>
 
-        <hr className={styles["divider"]} />
+        <hr className={styles["Divider"]} />
 
         </div>
-        <div className={styles["SearchBar-fields"]}>
+        <div className={styles["SearchBarFields"]}>
           <input placeholder="Find your experience!" />
           <input placeholder="Keyword : ( ie . BBQ )" />
         </div>
-        <div className={styles["SearchBar-submit"]}>
-          <button className={styles["button"]}>Let's Push</button>
+        <div className={styles["SearchBarSubmit"]}>
+          <button className={styles["Button"]}>Let's Push</button>
         </div>
       </div>
     </div>

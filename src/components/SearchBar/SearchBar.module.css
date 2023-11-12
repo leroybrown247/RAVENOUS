@@ -9,24 +9,25 @@
   justify-content: center;
 }
 
-.SearchBar-sort-options li {
+.SearchBarSortOptions li {
   display: inline;
   margin: 2rem;
   color: var(--pure);
   font-size: calc(3px + 2vmin);
 }
 
-.SearchBar-sort-options li:hover {
+.SearchBarSortOptions li:hover {
   cursor: pointer;
   color: var(--primary);
   transition: all 0.3s ease;
+  text-decoration: underline;
 }
 
-.divider-class {
+.DividerClass {
   margin-bottom: 10px;
 }
 
-.divider {
+.Divider {
   border: none;
   width: 500px;
   height: 1px;
@@ -35,11 +36,12 @@
   opacity: 60%;
 }
 
-.SearchBar-fields {
+.SearchBarFields {
   margin-bottom: 20px;
 }
 
-.SearchBar-fields input {
+.SearchBarFields input {
+  color: var(--dark);
   padding: 2px;
   padding-left: 10px;
   padding-right: 120px;
@@ -47,9 +49,10 @@
   font-family: 'Satisfy', cursive;
   border-width: 0;
   border-radius: 2px;
+  outline: none;
 }
 
-.button {
+.Button {
   padding: 0.5rem 1rem;
   font-weight: 600;
   font-size: 1rem;
@@ -61,7 +64,7 @@
   border-radius: 2px;
 }
 
-.button:hover {
+.Button:hover {
   color: var(--pure);
   background: var(--dark);
   transition: all 0.3s ease;

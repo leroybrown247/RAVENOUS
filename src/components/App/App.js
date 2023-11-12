@@ -6,17 +6,17 @@ import SearchBar from "../SearchBar/SearchBar";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="AppHeader">
         <h1>
           ravenous app
         </h1>
-        <p className="Tag-line">Find you next local hangout and eatery!</p>
+        <p className="TagLine">Find your next local hangout and eatery!</p>
       </header>
       <main>
         <SearchBar />
         <BusinessList />
       </main>
-      <footer>
+      <footer className="Footer">
 
       </footer>
     </div>

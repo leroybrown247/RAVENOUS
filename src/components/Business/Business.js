@@ -19,7 +19,7 @@ const Business = () => {
       <div className="imageContainer">
         <img src={sampleBusiness.imageSrc} alt={sampleBusiness.name} />
       </div>
-      <p>{sampleBusiness.name}</p>
+      <span><p>{sampleBusiness.name}</p></span>
       <div className={styles["BusinessInfo"]}>
         <div className={styles["BusinessAddress"]}>
           <p>{sampleBusiness.address},</p>

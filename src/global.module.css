@@ -49,12 +49,15 @@ body h1 {
   font-weight: 400;
 }
 
-span {
-  color: var(--primary);
-}
 
 body p {
   font-size: 12px;
   line-height: 0.4rem;
-  color: var(--paragraph);
+  color: var(--dark);
+}
+
+span {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: underline;
 }
