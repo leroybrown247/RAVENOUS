@@ -15,6 +15,29 @@ const business = [
     rating: 5,
     reviewCount: 100,
   },
+  {
+    id: 2,
+    name: 'Business 2',
+    imageSrc: 'image2.jpg',
+    address: '456 Oak St',
+    state: 'NY',
+    zipCode: '10001',
+    category: 'Coffee Shop',
+    rating: 4.0,
+    reviewCount: 90,
+  },
+
+  {
+    id: 3,
+    name: 'Business 2',
+    imageSrc: 'image2.jpg',
+    address: '456 Oak St',
+    state: 'NY',
+    zipCode: '10001',
+    category: 'Coffee Shop',
+    rating: 4.0,
+    reviewCount: 90,
+  },
 ];
 
 const BusinessList = () => {
