@@ -9,17 +9,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 2vw;
   color: var(--pure);
+  min-height: 2vw;
 }
 
-.AppLink {
-  color: var(--primary);
+.Heading {
+  margin-bottom: 0;
 }
 
 .TagLine {
   color: var(--pure);
-  font-size: calc(2px + 2vmin);
+  font-size: 2vw;
   font-weight: 100;
   font-family: 'Satisfy', cursive;
+}
+
+@media only screen and (max-width: 560px) {
+  html {
+    font-size: 2vw;
+  }
 }

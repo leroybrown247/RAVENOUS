@@ -1,6 +1,6 @@
 .SearchBar {
   min-height: 50vh;
-  background-image: url('ravenous.jpg');
+  background-image: url("ravenous.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -46,7 +46,7 @@
   padding-left: 10px;
   padding-right: 120px;
   margin-left: 10px;
-  font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   border-width: 0;
   border-radius: 2px;
   outline: none;
@@ -60,7 +60,7 @@
   cursor: pointer;
   color: var(--pure);
   background: var(--primary);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-radius: 2px;
 }
 
@@ -68,4 +68,30 @@
   color: var(--pure);
   background: var(--dark);
   transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 560px) {
+  .SearchBar {
+    background-image: url("ravenous.jpg");
+    min-height: 30vh;
+  }
+
+  .SearchBarSortOptions ul {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .Divider {
+    width: 200px;
+  }
+
+  .SearchBarFields {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .SearchBarFields input {
+    margin-right: 0;
+    margin-bottom: 0.86rem;
+  }
 }
