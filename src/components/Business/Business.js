@@ -16,21 +16,26 @@ const sampleBusiness = {
 const Business = () => {
   return (
     <div className={styles.Business}>
-      <div className="imageContainer">
+      <div className="ImageContainer">
         <img src={sampleBusiness.imageSrc} alt={sampleBusiness.name} />
+      <p className={styles["BusinessName"]}>{sampleBusiness.name}</p>
       </div>
-      <span><p>{sampleBusiness.name}</p></span>
       <div className={styles["BusinessInfo"]}>
+      <div className={styles["InfoContainer"]}>
         <div className={styles["BusinessAddress"]}>
           <p>{sampleBusiness.address},</p>
           <p>
-          {sampleBusiness.city}, {sampleBusiness.state} {sampleBusiness.zipCode}
-          </p>
+          {sampleBusiness.city},</p>
+          <p>{sampleBusiness.state}, 
+          {sampleBusiness.zipCode}</p>
+          </div>
         </div>
+        <div className={styles["DetailsContainer"]}>
         <div className={styles["BusinessReviews"]}>
-          <p>{sampleBusiness.category}</p>
-          <p className={styles.rating}>{sampleBusiness.rating} Stars</p>
-          <p>{sampleBusiness.reviewCount} reviews</p>
+          <p className={styles["Category"]}>{sampleBusiness.category}</p>
+          <p className={styles["Rating"]}>{sampleBusiness.rating} Stars</p>
+          <p>{sampleBusiness.reviewCount} Reviews</p>
+          </div>
         </div>
       </div>
     </div>

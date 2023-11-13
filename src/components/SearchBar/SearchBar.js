@@ -24,8 +24,8 @@ const SearchBar = () => {
 
         </div>
         <div className={styles["SearchBarFields"]}>
-          <input placeholder="Find your experience!" />
-          <input placeholder="Keyword : ( ie . BBQ )" />
+          <input placeholder="Search Businesse's" />
+          <input placeholder="Where?" />
         </div>
         <div className={styles["SearchBarSubmit"]}>
           <button className={styles["Button"]}>Let's Push</button>
