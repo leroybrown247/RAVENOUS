@@ -37,3 +37,50 @@ A list of mock restaurant data is presented to the user.
 - Git and GitHub
 - HTTP Requests and Responses
 - Authentication
+
+# Ravenous Part 2: Passing Information
+
+Welcome back to Ravenous! In Part 2 of the project, you will continue building upon the knowledge you gained in Part 1. This phase will focus on transferring information between components more efficiently while reducing hardcoding.
+
+Your objective will be to refactor the existing components using the standard unidirectional information flow pattern of a React application. This will establish a foundation for integrating with the Yelp API in the future and make data management easier.
+
+Completing Ravenous Part 2 will give you a better understanding of React components and how they can collaborate to create a dynamic and adaptable web application.
+
+## Project Requirements
+
+- Build the restaurant recommendation application using React
+
+- Utilize HTML, CSS, and JavaScript as part of the tech stack
+
+- Version control your application with Git and host the repository on GitHub
+
+- Write a README (using Markdown) that documents your project, including:
+
+- The purpose of your project
+
+- Technologies used
+
+- Features
+
+- Future work
+
+- Deploy your application and make it and accessible by users.
+
+## Features
+
+The website allows users to scroll up and down to navigate through its content.
+
+Users can simulate a search by typing in the search bar
+A list of mock restaurant data is presented to the user.
+
+Information is transferred efficiently between components using a unidirectional data flow pattern commonly used in React applications.
+
+### Prerequisites
+
+- HTML
+- CSS
+- JavaScript
+- React
+- Git and GitHub
+- HTTP Requests and Responses
+- Authentication
