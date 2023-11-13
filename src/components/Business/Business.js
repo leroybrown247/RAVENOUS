@@ -13,6 +13,7 @@ const sampleBusiness = {
   reviewCount: 100,
 };
 
+
 const Business = () => {
   return (
     <div className={styles.Business}>

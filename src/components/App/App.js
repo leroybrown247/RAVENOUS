@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="AppHeader">
-        <h1>
+        <h1 className="Heading">
           ravenous app
         </h1>
         <p className="TagLine">Find your next local hangout and eatery!</p>

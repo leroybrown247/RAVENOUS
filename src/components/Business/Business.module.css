@@ -59,3 +59,10 @@ img {
   font-weight: 600;
   color: var(--primary);
 }
+
+@media only screen and (max-width: 560px) {
+  .Business {
+   margin-bottom: 1vh;
+   width: 100%;
+  }
+}
