@@ -1,41 +1,29 @@
 import React from "react";
 import styles from "./Business.module.css";
 
-const sampleBusiness = {
-  imageSrc: "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
-  name: "TinTin & LuLu",
-  address: "101 Taniwha Street",
-  city: "Auckland",
-  state: "Glen Innes",
-  zipCode: "1072",
-  category: "Maori Cuisine",
-  rating: 5,
-  reviewCount: 100,
-};
 
-
-const Business = () => {
+const Business = ({ business }) => {
   return (
     <div className={styles.Business}>
       <div className="ImageContainer">
-        <img src={sampleBusiness.imageSrc} alt={sampleBusiness.name} />
-        <p className={styles["BusinessName"]}>{sampleBusiness.name}</p>
+        <img src={Business.imageSrc} alt={Business.name} />
+        <p className={styles["BusinessName"]}>{Business.name}</p>
       </div>
       <div className={styles["BusinessInfo"]}>
         <div className={styles["InfoContainer"]}>
           <div className={styles["BusinessAddress"]}>
-            <p>{sampleBusiness.address},</p>
-            <p>{sampleBusiness.city},</p>
+            <p>{Business.address},</p>
+            <p>{Business.city},</p>
             <p>
-              {sampleBusiness.state},{sampleBusiness.zipCode}
+              {Business.state},{Business.zipCode}
             </p>
           </div>
         </div>
         <div className={styles["DetailsContainer"]}>
           <div className={styles["BusinessReviews"]}>
-            <p className={styles["Category"]}>{sampleBusiness.category}</p>
-            <p className={styles["Rating"]}>{sampleBusiness.rating} Stars</p>
-            <p>{sampleBusiness.reviewCount} Reviews</p>
+            <p className={styles["Category"]}>{Business.category}</p>
+            <p className={styles["Rating"]}>{Business.rating} Stars</p>
+            <p>{Business.reviewCount} Reviews</p>
           </div>
         </div>
       </div>
