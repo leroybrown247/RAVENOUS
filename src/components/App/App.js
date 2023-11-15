@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
 
@@ -19,33 +20,31 @@ const businesses = [
   },
   {
     id: 2,
-    name: 'Business 2',
-    imageSrc: 'image2.jpg',
-    address: '456 Oak St',
-    state: 'NY',
-    zipCode: '10001',
-    category: 'Coffee Shop',
+    name: "Pizza Hutt",
+    imageSrc:
+      "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+    address: "35 Saint Johns Road",
+    city: "Auckland",
+    state: "MeadowBank Shopping Centre",
+    zipCode: "1072",
+    category: "Italian",
     rating: 4.0,
     reviewCount: 90,
-  }
-]
+  },
+];
 
 function App() {
   return (
     <div className="App">
       <header className="AppHeader">
-        <h1 className="Heading">
-          ravenous app
-        </h1>
+        <h1 className="Heading">ravenous app</h1>
         <p className="TagLine">Find your next local hangout and eatery!</p>
       </header>
       <main>
         <SearchBar />
-        <BusinessList businesses={businesses}/>
+        <BusinessList businesses={businesses} />
       </main>
-      <footer className="Footer">
-
-      </footer>
+      <footer className="Footer"></footer>
     </div>
   );
 }

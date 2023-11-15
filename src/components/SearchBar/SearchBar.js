@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SearchBar.module.css"
+import styles from "./SearchBar.module.css";
 
 const sortingOptions = {
   "Best Match": "best_match",
@@ -19,12 +19,10 @@ const SearchBar = () => {
           </ul>
         </div>
         <div className={styles["DividerClass"]}>
-
-        <hr className={styles["Divider"]} />
-
+          <hr className={styles["Divider"]} />
         </div>
         <div className={styles["SearchBarFields"]}>
-          <input placeholder="Search Businesse's" />
+          <input placeholder="Search business's" />
           <input placeholder="Where?" />
         </div>
         <div className={styles["SearchBarSubmit"]}>
