@@ -23,7 +23,8 @@ const [selectedSortOption, setSealectedSortOption] = useState("best-match");
         <div className={styles["SearchBarSortOptions"]}>
           <ul>
             {Object.keys(sortingOptions).map((option) => (
-              <li key={sortingOptions[option]}>{option}</li>
+              // 2. Update the selected sorting option when clicked.
+              <li key={sortingOptions[option]}>{option} onClick={() => setSelectedSortOption(sortingOptions[option])} className={selectedSortOption === sortingOptions[option] ? styles["SelectedOption"] : ""}</li>
             ))}
           </ul>
         </div>
