@@ -13,9 +13,13 @@ const SearchBar = () => {
   const [selectedSortOption, setSelectedSortOption] = useState("best-match");
 
   const handleSearchTermChange = (event) => {
-    // Update the search term state when the input changes
-    setSearchTerm(event.target.value)
-  }
+    setSearchTerm(event.target.value);
+  };
+
+  const handleLocationChange = (event) => {
+    // Update the location state when input changes
+    setLocation(event.target.value);
+  };
 
   return (
     <div>
@@ -49,7 +53,7 @@ const SearchBar = () => {
           <input
             placeholder="Where?"
             value={location}
-            onChange={(e) => setLocation(e.target.value)}
+            onChange={handleLocationChange}
           />
         </div>
         <div className={styles["SearchBarSubmit"]}>
