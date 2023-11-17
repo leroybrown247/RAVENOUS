@@ -14,10 +14,16 @@
   margin: 2rem;
   color: var(--pure);
   font-size: calc(3px + 2vmin);
+  cursor: pointer;
+}
+
+.SearchBarSortOptions li.selected {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 .SearchBarSortOptions li:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
   color: var(--primary);
   transition: all 0.3s ease;
   text-decoration: underline;
