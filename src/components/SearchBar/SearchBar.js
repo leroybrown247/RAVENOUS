@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
 
 const sortingOptions = {
@@ -7,15 +7,10 @@ const sortingOptions = {
   "Most Reviewed": "review_count",
 };
 
-
-
 const SearchBar = () => {
-
-// 1. Use the useState hook to manage the state for search term, location, and sorting option.
-
-const [searchTerm, setSearchTerm] = useState("");
-const [location, setLocation] = useState("");
-const [selectedSortOption, setSealectedSortOption] = useState("best-match");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [location, setLocation] = useState("");
+  const [selectedSortOption, setSelectedSortOption] = useState("best-match");
 
   return (
     <div>
@@ -23,8 +18,13 @@ const [selectedSortOption, setSealectedSortOption] = useState("best-match");
         <div className={styles["SearchBarSortOptions"]}>
           <ul>
             {Object.keys(sortingOptions).map((option) => (
-              // 2. Update the selected sorting option when clicked.
-              <li key={sortingOptions[option]}>{option} onClick={() => setSelectedSortOption(sortingOptions[option])} className={selectedSortOption === sortingOptions[option] ? styles["SelectedOption"] : ""}</li>
+              <li key={sortingOptions[option]}>
+                {option} onClick=
+                {() => setSelectedSortOption(sortingOptions[option])} className=
+                {selectedSortOption === sortingOptions[option]
+                  ? styles["SelectedOption"]
+                  : ""}
+              </li>
             ))}
           </ul>
         </div>
@@ -32,8 +32,16 @@ const [selectedSortOption, setSealectedSortOption] = useState("best-match");
           <hr className={styles["Divider"]} />
         </div>
         <div className={styles["SearchBarFields"]}>
-          <input placeholder="Search business's" />
-          <input placeholder="Where?" />
+          <input
+            placeholder="Search business's"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <input
+            placeholder="Where?"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+          />
         </div>
         <div className={styles["SearchBarSubmit"]}>
           <button className={styles["Button"]}>Let's Push</button>
