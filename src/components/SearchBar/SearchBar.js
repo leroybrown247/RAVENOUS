@@ -17,8 +17,15 @@ const SearchBar = () => {
   };
 
   const handleLocationChange = (event) => {
-    // Update the location state when input changes
     setLocation(event.target.value);
+  };
+
+  const handleSearch = (event) => {
+    event.preventDefault(); // Prevent default form Sub
+    // Log simulated search message
+    console.log(
+      `Searching Yelp with ${searchTerm}, ${location}, ${selectedSortOption}`
+    );
   };
 
   return (
@@ -57,7 +64,7 @@ const SearchBar = () => {
           />
         </div>
         <div className={styles["SearchBarSubmit"]}>
-          <button className={styles["Button"]}>Let's Push</button>
+          <button className={styles["Button"]} onClick={handleSearch}>Let's Push</button>
         </div>
       </div>
     </div>
