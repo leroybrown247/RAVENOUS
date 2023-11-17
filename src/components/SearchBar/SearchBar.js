@@ -7,7 +7,16 @@ const sortingOptions = {
   "Most Reviewed": "review_count",
 };
 
+
+
 const SearchBar = () => {
+
+// 1. Use the useState hook to manage the state for search term, location, and sorting option.
+
+const [searchTerm, setSearchTerm] = useState("");
+const [location, setLocation] = useState("");
+const [selectedSortOption, setSealectedSortOption] = useState("best-match");
+
   return (
     <div>
       <div className={styles.SearchBar}>
