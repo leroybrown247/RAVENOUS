@@ -7,6 +7,7 @@ import SearchBar from "../SearchBar/SearchBar";
 //Mock Business Data
 const businesses = [
   {
+    id: 1,
     imageSrc:
       "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
     name: "TinTin & LuLu",
@@ -20,9 +21,9 @@ const businesses = [
   },
   {
     id: 2,
-    name: "Pizza Hutt",
     imageSrc:
-      "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+    "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+    name: "Pizza Hutt",
     address: "35 Saint Johns Road",
     city: "Auckland",
     state: "MeadowBank Shopping Centre",
