@@ -18,12 +18,16 @@ const SearchBar = () => {
         <div className={styles["SearchBarSortOptions"]}>
           <ul>
             {Object.keys(sortingOptions).map((option) => (
-              <li key={sortingOptions[option]}>
-                {option} onClick=
-                {() => setSelectedSortOption(sortingOptions[option])} className=
-                {selectedSortOption === sortingOptions[option]
-                  ? styles["SelectedOption"]
-                  : ""}
+              <li
+                key={sortingOptions[option]}
+                onClick={() => setSelectedSortOption(sortingOptions[option])}
+                className={
+                  selectedSortOption === sortingOptions[option]
+                    ? styles["SelectedOption"]
+                    : ""
+                }
+              >
+                {option}
               </li>
             ))}
           </ul>
