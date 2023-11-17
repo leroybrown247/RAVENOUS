@@ -23,7 +23,7 @@ const Business = ({ business }) => {
           <div className={styles["BusinessReviews"]}>
             <p className={styles["Category"]}>{business.category}</p>
             <p className={styles["Rating"]}>{business.rating} Stars</p>
-            <p>{Business.reviewCount} Reviews</p>
+            <p>{business.reviewCount} Reviews</p>
           </div>
         </div>
       </div>
