@@ -12,6 +12,11 @@ const SearchBar = () => {
   const [location, setLocation] = useState("");
   const [selectedSortOption, setSelectedSortOption] = useState("best-match");
 
+  const handleSearchTermChange = (event) => {
+    // Update the search term state when the input changes
+    setSearchTerm(event.target.value)
+  }
+
   return (
     <div>
       <div className={styles.SearchBar}>
@@ -39,7 +44,7 @@ const SearchBar = () => {
           <input
             placeholder="Search business's"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={handleSearchTermChange}
           />
           <input
             placeholder="Where?"
