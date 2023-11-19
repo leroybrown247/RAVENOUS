@@ -20,4 +20,12 @@ try {
             Authorization: `Bearer ${apiKey}`
         }
     })
+
+// Step 6: Check if the response is successful
+
+if (response.ok) {
+    // Step 7: Parse the Json data
+    const jsonResponse = await response.json()
+}
+
 }
