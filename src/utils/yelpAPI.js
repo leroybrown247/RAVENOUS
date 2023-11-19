@@ -26,7 +26,7 @@ try {
 if (response.ok) {
     // Step 7: Parse the Json data
     const jsonResponse = await response.json()
-}
+
 
 // Step 8: Extract relevant info about each business
 const businesses = jsonResponse.business.map((business) => {
@@ -39,7 +39,18 @@ const businesses = jsonResponse.business.map((business) => {
           address: business.location.address1,
           city: business.location.city,
           state: business.location.state,
-    }
-})
+    };
+});
 
+// Step 9: resolve to an array of business objects
+return businesses;
+} else {
+
+    // Step 10: Handle errors
+    throw new Error('Error fetching data from Yelp API');
+} catch (error) {
+console.error('Error:', error.message)
 }
+};
+
+
