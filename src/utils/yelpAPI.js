@@ -1,4 +1,5 @@
 // Step 1: Import necessary dependencies
+import { findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
 import 'whatwg-fetch';
 
 // Step 2: Define constants for the Yelp API
@@ -11,3 +12,12 @@ const search = async (terms, location, sortBy) => {
     const url = `${apiUrl}?term=${terms}&location=${location}&sortBy=${sortBy}`
 }
 
+try {
+    // Step 5: Make a GET request to the Yelp API
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            Authorization: `Bearer ${apiKey}`
+        }
+    })
+}
