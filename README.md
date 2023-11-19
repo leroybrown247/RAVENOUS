@@ -75,12 +75,12 @@ A list of mock restaurant data is presented to the user.
 
 Information is transferred efficiently between components using a unidirectional data flow pattern commonly used in React applications.
 
-### Prerequisites
+# Ravenous Part 4: Interacting with the Yelp API
 
-- HTML
-- CSS
-- JavaScript
-- React
-- Git and GitHub
-- HTTP Requests and Responses
-- Authentication
+Welcome to the exciting final installment of the Ravenous project! As you approach the finish line, you’ll be putting the finishing touches on your creation.
+
+In Ravenous Part 3, you incorporated state into your React components. Now, in Part 4, you’ll connect your application to the Yelp API and enable users to interact with the web app to see live data that corresponds to their inputs.
+
+You’ll be using your existing knowledge of React events and event handlers to create a responsive and interactive user interface. You’ll need to capture user input using event listeners, update component state based on user actions, and create dynamic user interfaces that respond with real data.
+
+By the end of Ravenous Part 4, you’ll have achieved your goal of creating a fully functional clone of Yelp, complete with the ability to retrieve data from the Yelp API and present it through the polished interface you’ve developed.
