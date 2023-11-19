@@ -28,4 +28,18 @@ if (response.ok) {
     const jsonResponse = await response.json()
 }
 
+// Step 8: Extract relevant info about each business
+const businesses = jsonResponse.business.map((business) => {
+    return {
+        id: business.id,
+          name: business.name,
+          imageSrc: business.image_url,
+          rating: business.rating,
+          reviewCount: business.review_count,
+          address: business.location.address1,
+          city: business.location.city,
+          state: business.location.state,
+    }
+})
+
 }
