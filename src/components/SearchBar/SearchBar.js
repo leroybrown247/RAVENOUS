@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
+import search from "../../utils/yelpAPI"
+
 
 const sortingOptions = {
   "Best Match": "best_match",
@@ -7,10 +9,10 @@ const sortingOptions = {
   "Most Reviewed": "review_count",
 };
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [location, setLocation] = useState("");
-  const [selectedSortOption, setSelectedSortOption] = useState("best-match");
+  const [selectedSortOption, setSelectedSortOption] = useState("best_match");
 
   const handleSearchTermChange = (event) => {
     setSearchTerm(event.target.value);
@@ -20,12 +22,15 @@ const SearchBar = () => {
     setLocation(event.target.value);
   };
 
-  const handleSearch = (event) => {
-    event.preventDefault(); // Prevent default form Sub
-    // Log simulated search message
-    console.log(
-      `Searching Yelp with ${searchTerm}, ${location}, ${selectedSortOption}`
-    );
+  const handleSearch = async (event) => {
+    event.preventDefault();
+ 
+    try {
+      const businesses = await search(searchTerm, location, selectedSortOption);
+      onSearch(businesses);
+    } catch (error) {
+      console.error("Error searching Yelp:", error.message)
+    }
   };
 
   return (

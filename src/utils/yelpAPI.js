@@ -1,11 +1,11 @@
 import "whatwg-fetch";
 
 const apiKey =
-  "-CJPQb3Nh13vVk4NP4JFsc58OzunliBDcmn9TIPls8oqO5yctmCV4a1UMdFUrl1OTa5qaHDjG9BG0oiPnUuYzUqYOCfqzT_PNrqXhSd9ROBkZbGZEMc_vnegk9dZZXYx";
-const apiUrl = "https://api.yelp.com/v3/businesses/search";
+  "kKOEV3fuMAE5CemDJ5xI024W-wyVdFiX0IsJvk-8A5bw3cK0sL5T5t5B8bWSKgWtmNy7ME8MoIawpUR-DblVcHMLSMcFdkcDfxrBhjW4QvLlbmdYHNtd6fvi-bNaZXYx";
+  const apiUrl = "https://api.yelp.com/v3/businesses/search";
 
 const search = async (terms, location, sortBy) => {
-  const url = `${apiUrl}?term=${terms}&location=${location}&sortBy=${sortBy}`;
+  const url = `https://cors-anywhere.herokuapp.com/${apiUrl}?term=${terms}&location=${location}&sortBy=${sortBy}`;
 
   try {
     const response = await fetch(url, {
@@ -13,32 +13,40 @@ const search = async (terms, location, sortBy) => {
       headers: {
         Authorization: `Bearer ${apiKey}`,
       },
+      redirect: 'follow', // Handle redirects
     });
 
     if (response.ok) {
       const jsonResponse = await response.json();
 
-      const businesses = jsonResponse.business.map((business) => {
-        return {
-          id: business.id,
-          imageSrc: business.image_url,
-          name: business.name,
-          address: business.location.address1,
-          city: business.location.city,
-          state: business.location.state,
-          zipCode: business.location.zip_code,
-          category: business.category, 
-          rating: business.rating,
-          reviewCount: business.review_count,
-        };
-      });
+      console.log(jsonResponse);
+
+      const businesses = jsonResponse.businesses && Array.isArray(jsonResponse.businesses)
+      ? jsonResponse.businesses.map((business) => {
+          return {
+            id: business.id,
+            imageSrc: business.image_url,
+            name: business.name,
+            address: business.location.address1,
+            city: business.location.city,
+            state: business.location.state,
+            zipCode: business.location.zip_code,
+            category: business.categories.map((category) => category.title).join(', '), 
+            rating: business.rating,
+            reviewCount: business.review_count,
+          };
+        })
+      : [];
 
       return businesses;
     } else {
+      const errorResponse = await response.text(); // Get the actual response content
+      console.error("Error fetching data from Yelp API:", errorResponse);
       throw new Error("Error fetching data from Yelp API");
     }
   } catch (error) {
     console.error("Error:", error.message);
+    throw error;
   }
 };
 
