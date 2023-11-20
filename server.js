@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
 import fetch from "node-fetch";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const port = 3000;
@@ -14,8 +17,7 @@ app.get("/api/businesses", async (req, res) => {
   try {
     const response = await fetch(apiUrl, {
       headers: {
-        Authorization:
-          "kKOEV3fuMAE5CemDJ5xI024W-wyVdFiX0IsJvk-8A5bw3cK0sL5T5t5B8bWSKgWtmNy7ME8MoIawpUR-DblVcHMLSMcFdkcDfxrBhjW4QvLlbmdYHNtd6fvi-bNaZXYx",
+        Authorization: process.env.YELP_API_KEY,
       },
     });
 

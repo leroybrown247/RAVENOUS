@@ -1,7 +1,6 @@
 import "whatwg-fetch";
 
-const apiKey =
-  "kKOEV3fuMAE5CemDJ5xI024W-wyVdFiX0IsJvk-8A5bw3cK0sL5T5t5B8bWSKgWtmNy7ME8MoIawpUR-DblVcHMLSMcFdkcDfxrBhjW4QvLlbmdYHNtd6fvi-bNaZXYx";
+const apiKey = process.env.REACT_APP_YELP_API_KEY;
   const apiUrl = "https://api.yelp.com/v3/businesses/search";
 
 const search = async (terms, location, sortBy) => {
