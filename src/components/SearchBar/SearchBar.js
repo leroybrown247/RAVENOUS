@@ -14,6 +14,12 @@ const SearchBar = ({ onSearch }) => {
   const [location, setLocation] = useState("");
   const [selectedSortOption, setSelectedSortOption] = useState("best_match");
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSearch(event);
+    }
+  };
+
   const handleSearchTermChange = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -61,11 +67,13 @@ const SearchBar = ({ onSearch }) => {
             placeholder="Search business's"
             value={searchTerm}
             onChange={handleSearchTermChange}
+            onKeyPress={handleKeyPress}
           />
           <input
             placeholder="Where?"
             value={location}
             onChange={handleLocationChange}
+            onKeyPress={handleKeyPress}
           />
         </div>
         <div className={styles["SearchBarSubmit"]}>
