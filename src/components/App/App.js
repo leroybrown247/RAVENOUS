@@ -1,39 +1,14 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
 
-// //Mock Business Data
-// const businesses = [
-//   {
-//     id: 1,
-//     imageSrc:
-//       "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
-//     name: "TinTin & LuLu",
-//     address: "101 Taniwha Street",
-//     city: "Auckland",
-//     state: "Glen Innes",
-//     zipCode: "1072",
-//     category: "Maori Cuisine",
-//     rating: 5,
-//     reviewCount: 100,
-//   },
-//   {
-//     id: 2,
-//     imageSrc:
-//     "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
-//     name: "Pizza Hutt",
-//     address: "35 Saint Johns Road",
-//     city: "Auckland",
-//     state: "MeadowBank Shopping Centre",
-//     zipCode: "1072",
-//     category: "Italian",
-//     rating: 4.0,
-//     reviewCount: 90,
-//   },
-// ];
-
 function App() {
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = (businesses) => {
+    setSearchResults(businesses);
+  };
   return (
     <div className="App">
       <header className="AppHeader">
@@ -41,8 +16,8 @@ function App() {
         <p className="TagLine">Find your next local hangout and eatery!</p>
       </header>
       <main>
-        <SearchBar />
-        <BusinessList />
+        <SearchBar onSearch={handleSearch} />
+        <BusinessList businesses={searchResults} />
       </main>
       <footer className="Footer"></footer>
     </div>
