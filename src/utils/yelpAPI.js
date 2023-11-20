@@ -21,13 +21,15 @@ const search = async (terms, location, sortBy) => {
       const businesses = jsonResponse.business.map((business) => {
         return {
           id: business.id,
-          name: business.name,
           imageSrc: business.image_url,
-          rating: business.rating,
-          reviewCount: business.review_count,
+          name: business.name,
           address: business.location.address1,
           city: business.location.city,
           state: business.location.state,
+          zipCode: business.location.zip_code,
+          category: business.category, 
+          rating: business.rating,
+          reviewCount: business.review_count,
         };
       });
 

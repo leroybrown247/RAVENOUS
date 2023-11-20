@@ -1,38 +1,37 @@
 import "./App.css";
 import React from "react";
-
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
 
-//Mock Business Data
-const businesses = [
-  {
-    id: 1,
-    imageSrc:
-      "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
-    name: "TinTin & LuLu",
-    address: "101 Taniwha Street",
-    city: "Auckland",
-    state: "Glen Innes",
-    zipCode: "1072",
-    category: "Maori Cuisine",
-    rating: 5,
-    reviewCount: 100,
-  },
-  {
-    id: 2,
-    imageSrc:
-    "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
-    name: "Pizza Hutt",
-    address: "35 Saint Johns Road",
-    city: "Auckland",
-    state: "MeadowBank Shopping Centre",
-    zipCode: "1072",
-    category: "Italian",
-    rating: 4.0,
-    reviewCount: 90,
-  },
-];
+// //Mock Business Data
+// const businesses = [
+//   {
+//     id: 1,
+//     imageSrc:
+//       "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+//     name: "TinTin & LuLu",
+//     address: "101 Taniwha Street",
+//     city: "Auckland",
+//     state: "Glen Innes",
+//     zipCode: "1072",
+//     category: "Maori Cuisine",
+//     rating: 5,
+//     reviewCount: 100,
+//   },
+//   {
+//     id: 2,
+//     imageSrc:
+//     "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+//     name: "Pizza Hutt",
+//     address: "35 Saint Johns Road",
+//     city: "Auckland",
+//     state: "MeadowBank Shopping Centre",
+//     zipCode: "1072",
+//     category: "Italian",
+//     rating: 4.0,
+//     reviewCount: 90,
+//   },
+// ];
 
 function App() {
   return (
@@ -43,7 +42,7 @@ function App() {
       </header>
       <main>
         <SearchBar />
-        <BusinessList businesses={businesses} />
+        <BusinessList />
       </main>
       <footer className="Footer"></footer>
     </div>
