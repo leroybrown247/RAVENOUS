@@ -14,6 +14,18 @@ const SearchBar = ({ onSearch }) => {
   const [location, setLocation] = useState("");
   const [selectedSortOption, setSelectedSortOption] = useState("best_match");
 
+  // const handleSearch = async (event) => {
+  //   event.preventDefault();
+
+  //   try {
+  //     const businesses = await search(searchTerm, location, selectedSortOption);
+  //     onSearch(businesses);
+      
+  //   } catch (error) {
+  //     console.error("Error searching Yelp:", error.message)
+  //   }
+  // };
+
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSearch(event);
@@ -33,6 +45,13 @@ const SearchBar = ({ onSearch }) => {
  
     try {
       const businesses = await search(searchTerm, location, selectedSortOption);
+      // Sort businesses based on the search term
+      const sortedBusinesses = businesses.slice().sort((a, b) =>{
+        if (selectedSortOption === "rating") {
+          return b.rating - a.rating; // Sorts by highest rating first
+          
+      })
+
       onSearch(businesses);
     } catch (error) {
       console.error("Error searching Yelp:", error.message)
@@ -47,7 +66,10 @@ const SearchBar = ({ onSearch }) => {
             {Object.keys(sortingOptions).map((option) => (
               <li
                 key={sortingOptions[option]}
-                onClick={() => setSelectedSortOption(sortingOptions[option])}
+             onClick={() => {
+              setSelectedSortOption(sortingOptions[option]);
+              handleSearch(new Event('click'));
+             }}
                 className={
                   selectedSortOption === sortingOptions[option]
                     ? styles["SelectedOption"]
