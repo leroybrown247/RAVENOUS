@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
-import search from "../../utils/yelpAPI"
-
+import search from "../../utils/yelpAPI";
 
 const sortingOptions = {
   "Best Match": "best_match",
@@ -13,18 +12,6 @@ const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [location, setLocation] = useState("");
   const [selectedSortOption, setSelectedSortOption] = useState("best_match");
-
-  // const handleSearch = async (event) => {
-  //   event.preventDefault();
-
-  //   try {
-  //     const businesses = await search(searchTerm, location, selectedSortOption);
-  //     onSearch(businesses);
-      
-  //   } catch (error) {
-  //     console.error("Error searching Yelp:", error.message)
-  //   }
-  // };
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
@@ -42,19 +29,24 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearch = async (event) => {
     event.preventDefault();
- 
+
     try {
       const businesses = await search(searchTerm, location, selectedSortOption);
+      
       // Sort businesses based on the search term
-      const sortedBusinesses = businesses.slice().sort((a, b) =>{
+      const sortedBusinesses = businesses.slice().sort((a, b) => {
         if (selectedSortOption === "rating") {
           return b.rating - a.rating; // Sorts by highest rating first
-          
-      })
+        } else if (selectedSortOption === "review_count") {
+          return b.review_count - a.review_count; // Sorts by highest review count first
+        } else {
+          return 0;
+        }
+      });
 
-      onSearch(businesses);
+      onSearch(sortedBusinesses);
     } catch (error) {
-      console.error("Error searching Yelp:", error.message)
+      console.error("Error searching Yelp:", error.message);
     }
   };
 
@@ -66,10 +58,10 @@ const SearchBar = ({ onSearch }) => {
             {Object.keys(sortingOptions).map((option) => (
               <li
                 key={sortingOptions[option]}
-             onClick={() => {
-              setSelectedSortOption(sortingOptions[option]);
-              handleSearch(new Event('click'));
-             }}
+                onClick={() => {
+                  setSelectedSortOption(sortingOptions[option]);
+                  handleSearch(new Event("click"));
+                }}
                 className={
                   selectedSortOption === sortingOptions[option]
                     ? styles["SelectedOption"]
@@ -99,7 +91,9 @@ const SearchBar = ({ onSearch }) => {
           />
         </div>
         <div className={styles["SearchBarSubmit"]}>
-          <button className={styles["Button"]} onClick={handleSearch}>Let's Push</button>
+          <button className={styles["Button"]} onClick={handleSearch}>
+            Click to search
+          </button>
         </div>
       </div>
     </div>
