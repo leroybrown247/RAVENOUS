@@ -30,6 +30,7 @@ img {
   font-weight: 600;
   font-size: 18px;
   font-family: "Satisfy", cursive;
+  line-height: 1rem;
 }
 
 .BusinessName:hover {
