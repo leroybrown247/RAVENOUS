@@ -13,7 +13,7 @@ const SearchBar = ({ onSearch }) => {
   const [location, setLocation] = useState("");
   const [selectedSortOption, setSelectedSortOption] = useState("best_match");
 
-  const handleKeyPress = (event) => {
+  const handleKeyDown = (event) => { // Prevents the default action of the event
     if (event.key === "Enter") {
       handleSearch(event);
     }
@@ -49,6 +49,7 @@ const SearchBar = ({ onSearch }) => {
       console.error("Error searching Yelp:", error.message);
     }
   };
+  
 
   return (
     <div>
@@ -78,16 +79,16 @@ const SearchBar = ({ onSearch }) => {
         </div>
         <div className={styles["SearchBarFields"]}>
           <input
-            placeholder="Search business's"
+            placeholder="Cuisine?"
             value={searchTerm}
             onChange={handleSearchTermChange}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyDown}
           />
           <input
-            placeholder="Where?"
+            placeholder="Location?"
             value={location}
             onChange={handleLocationChange}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyDown}
           />
         </div>
         <div className={styles["SearchBarSubmit"]}>
