@@ -31,9 +31,9 @@ const search = async (terms, location, sortBy) => {
                 city: business.location.city,
                 state: business.location.state,
                 zipCode: business.location.zip_code,
-                category: business.categories
-                  .map((category) => category.title)
-                  .join(", "),
+                category: business.categories[0].title,
+                  // .map((category) => category.title)
+                  // .join(", "),
                 rating: business.rating,
                 reviewCount: business.review_count,
               };
