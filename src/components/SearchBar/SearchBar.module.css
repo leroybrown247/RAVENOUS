@@ -23,7 +23,7 @@
 }
 
 .SearchBarSortOptions li:hover {
-  color: var(--primary);
+  color: var(--paragraph);
   transition: all 0.3s ease;
   text-decoration: underline;
 }
@@ -70,7 +70,7 @@
 
 .Button:hover {
   color: var(--pure);
-  background: var(--dark);
+  background: var(--paragraph);
   transition: all 0.3s ease;
 }
 

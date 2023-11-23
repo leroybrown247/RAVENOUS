@@ -36,22 +36,26 @@ const SearchBar = ({ onSearch }) => {
   };
 
   // Memoized version of handleSearch using useCallback
-  const handleSearch = useCallback(async () => {
+  const handleSearch = useCallback(async (sortOption) => {
     try {
       const businesses = await search(searchTerm, location, selectedSortOption);
       const sortedBusinesses = sortBusinesses(businesses, selectedSortOption);
       const limitedResults = sortedBusinesses.slice(0, 10); // Limit the results to 10
       setSearchResults(limitedResults); // Set the state of searchResults
-      onSearch(sortedBusinesses); //
     } catch (error) {
       console.error("Error searching Yelp:", error.message);
     }
-  }, [searchTerm, location, selectedSortOption, onSearch]);
+  }, [searchTerm, location]);
 
   // useEffect hook to run handleSearch when selectedSortOption changes
   useEffect(() => {
     handleSearch();
   }, [selectedSortOption, handleSearch]); // Include handleSearch in the dependencies array
+
+  const handleSortingOptionClick = (sortOption) => {
+    setSelectedSortOption(sortOption);
+    handleSearch(sortOption);
+  };
 
   return (
     <div>
@@ -83,12 +87,12 @@ const SearchBar = ({ onSearch }) => {
         {/* Search input fields */}
         <div className={styles["SearchBarFields"]}>
           <input
-            placeholder="Cuisine?"
+            placeholder="Search cuisine?"
             value={searchTerm}
             onChange={handleSearchTermChange}
           />
           <input
-            placeholder="Location?"
+            placeholder="Search location?"
             value={location}
             onChange={handleLocationChange}
           />
@@ -100,19 +104,6 @@ const SearchBar = ({ onSearch }) => {
             Click to search
           </button>
         </div>
-      </div>
-
-      {/* Display search results */}
-      <div className={styles["SearchResults"]}>
-        <p>Search Results:</p>
-        <ul>
-          {searchResults.map((result) => (
-            <li key={result.id}>
-              Customize the display based on your search result properties
-              {result.name} - Rating: {result.rating}
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   );
