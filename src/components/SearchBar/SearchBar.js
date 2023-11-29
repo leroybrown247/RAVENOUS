@@ -34,6 +34,11 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearch = useCallback(async () => {
     try {
+
+      // Introduce a delay before making the API request
+    const delay = 1000; // 1000 milliseconds (adjust as needed)
+    await new Promise(resolve => setTimeout(resolve, delay));
+
       const businesses = await search(searchTerm, location, selectedSortOption);
       const sortedBusinesses = sortBusinesses(businesses, selectedSortOption);
       const limitedResults = sortedBusinesses.slice(0, 10);
