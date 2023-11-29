@@ -63,14 +63,14 @@
   border: 2px solid transparent;
   cursor: pointer;
   color: var(--pure);
-  background: var(--primary);
+  background: var(--dark);
   font-family: "Roboto", sans-serif;
   border-radius: 2px;
 }
 
 .Button:hover {
   color: var(--pure);
-  background: var(--dark);
+  background: var(--primary);
   transition: all 0.3s ease;
 }
 
