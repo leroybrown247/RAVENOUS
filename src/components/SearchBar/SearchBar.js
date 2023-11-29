@@ -32,7 +32,6 @@ const SearchBar = ({ onSearch }) => {
     }
   };
 
-  // Memoized version of handleSearch using useCallback
   const handleSearch = useCallback(async () => {
     try {
       const businesses = await search(searchTerm, location, selectedSortOption);
@@ -57,8 +56,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   useEffect(() => {
-    // You can optionally add any other logic here
-  }, [searchResults]); // Add dependencies as needed
+  }, [searchResults]);
 
   return (
     <div>
@@ -110,18 +108,9 @@ const SearchBar = ({ onSearch }) => {
           </button>
         </div>
       </div>
-
-      {/* Display search results */}
-      <div className={styles["SearchResults"]}>
+      <div>
         <p>Search Results:</p>
-        <ul>
-          {searchResults.map((result) => (
-            <li key={result.id}>
-              Customize the display based on your search result properties
-              {result.name} - Rating: {result.rating}
-            </li>
-          ))}
-        </ul>
+        
       </div>
     </div>
   );
