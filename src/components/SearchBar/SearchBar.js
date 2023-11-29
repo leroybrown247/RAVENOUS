@@ -32,21 +32,33 @@ const SearchBar = ({ onSearch }) => {
     }
   };
 
+  // Memoized version of handleSearch using useCallback
   const handleSearch = useCallback(async () => {
     try {
       const businesses = await search(searchTerm, location, selectedSortOption);
       const sortedBusinesses = sortBusinesses(businesses, selectedSortOption);
-      const limitedResults = sortedBusinesses.slice(0, 10); // Limit the results to 10
-      setSearchResults(limitedResults); 
-      onSearch(sortedBusinesses); 
+      const limitedResults = sortedBusinesses.slice(0, 10);
+      setSearchResults(limitedResults);
+      onSearch(sortedBusinesses);
     } catch (error) {
       console.error("Error searching Yelp:", error.message);
     }
-  }, [searchTerm, location]);
+  }, [searchTerm, location, selectedSortOption, onSearch]);
+
+  const handleClickSearch = () => {
+    handleSearch();
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleSearch();
+    }
+  };
 
   useEffect(() => {
-    handleSearch();
-  }, [selectedSortOption, handleSearch]); 
+    // You can optionally add any other logic here
+  }, [searchResults]); // Add dependencies as needed
 
   return (
     <div>
@@ -81,17 +93,19 @@ const SearchBar = ({ onSearch }) => {
             placeholder="Search cuisine type?"
             value={searchTerm}
             onChange={handleSearchTermChange}
+            onKeyDown={handleKeyDown}
           />
           <input
             placeholder="Search location?"
             value={location}
             onChange={handleLocationChange}
+            onKeyDown={handleKeyDown}
           />
         </div>
 
         {/* Search button */}
         <div className={styles["SearchBarSubmit"]}>
-          <button className={styles["Button"]} onClick={handleSearch}>
+          <button className={styles["Button"]} onClick={handleClickSearch}>
             Click to search
           </button>
         </div>
@@ -100,6 +114,14 @@ const SearchBar = ({ onSearch }) => {
       {/* Display search results */}
       <div className={styles["SearchResults"]}>
         <p>Search Results:</p>
+        <ul>
+          {searchResults.map((result) => (
+            <li key={result.id}>
+              Customize the display based on your search result properties
+              {result.name} - Rating: {result.rating}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
