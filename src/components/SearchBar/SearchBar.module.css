@@ -1,0 +1,101 @@
+.SearchBar {
+  min-height: 50vh;
+  background-image: url("ravenous_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.SearchBarSortOptions li {
+  display: inline;
+  margin: 2rem;
+  color: var(--pure);
+  font-size: calc(3px + 2vmin);
+  cursor: pointer;
+}
+
+.SearchBarSortOptions li.selected {
+  color: var(--pure);
+  text-decoration: underline;
+}
+
+.SearchBarSortOptions li:hover {
+  color: var(--primary);
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+
+.DividerClass {
+  margin-bottom: 10px;
+}
+
+.Divider {
+  border: none;
+  width: 500px;
+  height: 1px;
+  background-color: var(--pure);
+  margin: 10px 0;
+  opacity: 60%;
+}
+
+.SearchBarFields {
+  margin-bottom: 20px;
+}
+
+.SearchBarFields input {
+  color: var(--dark);
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 120px;
+  margin-left: 10px;
+  font-family: "Satisfy", cursive;
+  border-width: 0;
+  border-radius: 2px;
+  outline: none;
+}
+
+.Button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: var(--pure);
+  background: var(--dark);
+  font-family: "Roboto", sans-serif;
+  border-radius: 2px;
+}
+
+.Button:hover {
+  color: var(--pure);
+  background: var(--primary);
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 560px) {
+  .SearchBar {
+    background-image: url("ravenous_2.jpg");
+    min-height: 30vh;
+  }
+
+  .SearchBarSortOptions ul {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .Divider {
+    width: 200px;
+  }
+
+  .SearchBarFields {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .SearchBarFields input {
+    margin-right: 0;
+    margin-bottom: 0.86rem;
+  }
+}

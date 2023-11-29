@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+
+.AppHeader {
+  background-color: var(--dark);
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  color: var(--primary);
+  min-height: 2vw;
+}
+
+.Heading {
+  margin-bottom: 0;
+}
+
+.TagLine {
+  color: var(--pure);
+  font-size: 2vw;
+  font-weight: 100;
+  font-family: 'Satisfy', cursive;
+}
+
+@media only screen and (max-width: 560px) {
+  html {
+    font-size: 2vw;
+  }
+}
