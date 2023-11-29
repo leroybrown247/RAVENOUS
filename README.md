@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ravenous Part 1:
 
 ### Creating Project & Components
@@ -84,3 +85,7 @@ In Ravenous Part 3, you incorporated state into your React components. Now, in P
 You’ll be using your existing knowledge of React events and event handlers to create a responsive and interactive user interface. You’ll need to capture user input using event listeners, update component state based on user actions, and create dynamic user interfaces that respond with real data.
 
 By the end of Ravenous Part 4, you’ll have achieved your goal of creating a fully functional clone of Yelp, complete with the ability to retrieve data from the Yelp API and present it through the polished interface you’ve developed.
+=======
+# ravenous
+Build a restaurant recommendation application using React
+>>>>>>> add188f839a36dcdfeb648232e21f5e0dccf065d
