@@ -3,7 +3,7 @@
 }
 
 .AppHeader {
-  background-color: var(--primary);
+  background-color: var(--dark);
   min-height: 10vh;
   display: flex;
   flex-direction: column;
