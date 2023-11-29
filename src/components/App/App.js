@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <header className="AppHeader">
-        <h1 className="Heading">ravenous app</h1>
+        <h1 className="Heading">Ravenous App</h1>
         <p className="TagLine">Find your next local hangout and eatery!</p>
       </header>
       <main>

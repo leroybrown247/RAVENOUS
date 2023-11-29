@@ -83,12 +83,12 @@ const SearchBar = ({ onSearch }) => {
         {/* Search input fields */}
         <div className={styles["SearchBarFields"]}>
           <input
-            placeholder="Cuisine?"
+            placeholder="Search cuisine type?"
             value={searchTerm}
             onChange={handleSearchTermChange}
           />
           <input
-            placeholder="Location?"
+            placeholder="Search location?"
             value={location}
             onChange={handleLocationChange}
           />
