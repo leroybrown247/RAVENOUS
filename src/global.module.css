@@ -1,8 +1,8 @@
 :root {
-  --primary: #232323;;
+  --primary: #c39948;
   --pure: #ffffff;
-  --dark: #5f5f5f;
-  --paragraph: #c39948;
+  --dark: #232323;
+  --paragraph: #606060;
   --background: #bababa;
 }
 

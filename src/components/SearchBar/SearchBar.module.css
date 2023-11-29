@@ -18,12 +18,12 @@
 }
 
 .SearchBarSortOptions li.selected {
-  color: var(--primary);
+  color: var(--pure);
   text-decoration: underline;
 }
 
 .SearchBarSortOptions li:hover {
-  color: var(--paragraph);
+  color: var(--primary);
   transition: all 0.3s ease;
   text-decoration: underline;
 }

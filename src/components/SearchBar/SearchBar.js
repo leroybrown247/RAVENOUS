@@ -14,17 +14,14 @@ const SearchBar = ({ onSearch }) => {
   const [selectedSortOption, setSelectedSortOption] = useState("best_match");
   const [searchResults, setSearchResults] = useState([]);
 
-  // Handle changes in the search term input
   const handleSearchTermChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  // Handle changes in the location input
   const handleLocationChange = (event) => {
     setLocation(event.target.value);
   };
 
-  // Sort businesses based on the selected sort option
   const sortBusinesses = (businesses, sortOption) => {
     if (sortOption === "rating") {
       return businesses.slice().sort((a, b) => b.rating - a.rating);
@@ -35,27 +32,21 @@ const SearchBar = ({ onSearch }) => {
     }
   };
 
-  // Memoized version of handleSearch using useCallback
-  const handleSearch = useCallback(async (sortOption) => {
+  const handleSearch = useCallback(async () => {
     try {
       const businesses = await search(searchTerm, location, selectedSortOption);
       const sortedBusinesses = sortBusinesses(businesses, selectedSortOption);
       const limitedResults = sortedBusinesses.slice(0, 10); // Limit the results to 10
-      setSearchResults(limitedResults); // Set the state of searchResults
+      setSearchResults(limitedResults); 
+      onSearch(sortedBusinesses); 
     } catch (error) {
       console.error("Error searching Yelp:", error.message);
     }
   }, [searchTerm, location]);
 
-  // useEffect hook to run handleSearch when selectedSortOption changes
   useEffect(() => {
     handleSearch();
-  }, [selectedSortOption, handleSearch]); // Include handleSearch in the dependencies array
-
-  const handleSortingOptionClick = (sortOption) => {
-    setSelectedSortOption(sortOption);
-    handleSearch(sortOption);
-  };
+  }, [selectedSortOption, handleSearch]); 
 
   return (
     <div>
@@ -104,6 +95,11 @@ const SearchBar = ({ onSearch }) => {
             Click to search
           </button>
         </div>
+      </div>
+
+      {/* Display search results */}
+      <div className={styles["SearchResults"]}>
+        <p>Search Results:</p>
       </div>
     </div>
   );
