@@ -42,7 +42,7 @@ const SearchBar = ({ onSearch }) => {
     } catch (error) {
       console.error("Error searching Yelp:", error.message);
     }
-  }, [searchTerm, location, selectedSortOption, onSearch]);
+  }, [searchTerm, location]);
 
   useEffect(() => {
     handleSearch();
