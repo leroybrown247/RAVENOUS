@@ -1,6 +1,6 @@
 # <img src="public/Ravenous-Favicon-two.svg" width="20"> RAVENOUS
 
-Ravenous is a restaurant recommendation website that empowers users to search for local businesses based on their location and keywords utilising the YELP API.
+Ravenous is a restaurant recommendation website that empowers users to search for local businesses based on their location and keywords utilising the YELP API. See project deployed at https://leroybrown247.github.io/RAVENOUS/
 
 ![](public/Ravenous%20Project.gif)
 
