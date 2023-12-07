@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/RAVENOUS/static/css/main.06f5366f.css",
+    "main.js": "/RAVENOUS/static/js/main.70813940.js",
+    "static/js/787.a2761047.chunk.js": "/RAVENOUS/static/js/787.a2761047.chunk.js",
+    "static/media/ravenous_2.jpg": "/RAVENOUS/static/media/ravenous_2.c2f15cd518eb777588d8.jpg",
+    "static/media/Ravenous-Favicon.svg": "/RAVENOUS/static/media/Ravenous-Favicon.9d63d82c91cd6deb40a82f9a41a9c67e.svg",
+    "index.html": "/RAVENOUS/index.html",
+    "main.06f5366f.css.map": "/RAVENOUS/static/css/main.06f5366f.css.map",
+    "main.70813940.js.map": "/RAVENOUS/static/js/main.70813940.js.map",
+    "787.a2761047.chunk.js.map": "/RAVENOUS/static/js/787.a2761047.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06f5366f.css",
+    "static/js/main.70813940.js"
+  ]
+}
