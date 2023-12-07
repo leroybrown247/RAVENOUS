@@ -1,0 +1,59 @@
+:root {
+  --primary: #c39948;
+  --pure: #ffffff;
+  --dark: #232323;
+  --paragraph: #606060;
+  --background: #bababa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--dark);
+  font-family: "Roboto", sans-serif;
+}
+
+body h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+body h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+body h2 {
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+body h1 {
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+body p {
+  font-size: 12px;
+  line-height: 0.4rem;
+  color: var(--dark);
+  font-family: "Roboto", sans-serif;
+}
+
+span {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: underline;
+}

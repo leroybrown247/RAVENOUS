@@ -1,0 +1,82 @@
+.Business {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 10px;
+  background-color: var(--pure);
+  color: var(--dark);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.Business:hover {
+  transform: scale(1.05);
+}
+
+.ImageContainer {
+  height: 16.66rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.BusinessInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BusinessName {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Satisfy", cursive;
+  line-height: 1rem;
+}
+
+.BusinessName:hover {
+  color: var(--dark);
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+
+.InfoContainer {
+  align-items: left;
+  text-align: left;
+}
+
+.DetailsContainer {
+  align-items: right;
+  text-align: right;
+}
+
+.Category {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.BusinessAddress {
+  margin-bottom: 1rem;
+}
+
+.Rating {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 560px) {
+  .Business {
+   margin-bottom: 1vh;
+   width: 100%;
+  }
+}
