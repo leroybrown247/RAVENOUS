@@ -3,10 +3,9 @@
 }
 
 .AppHeader {
-  background-color: var(--dark);
-  min-height: 10vh;
+  background: linear-gradient(140deg, rgb(2, 2, 2), rgba(46, 46, 46, 0.701));  min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: 2vw;
@@ -14,13 +13,30 @@
   min-height: 2vw;
 }
 
+
+.Header-content {
+  display: flex;
+  flex-direction: column 2;
+  align-items: center;
+}
+
+.Logo {
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+  pointer-events: none;
+}
+
 .Heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-bottom: 0;
 }
 
 .TagLine {
   color: var(--pure);
-  font-size: 2vw;
+  font-size: 1.3rem;
   font-weight: 100;
   font-family: 'Satisfy', cursive;
 }
