@@ -76,7 +76,7 @@ img {
 
 @media only screen and (max-width: 560px) {
   .Business {
-   margin-bottom: 1vh;
-   width: 100%;
+    margin-bottom: 1vh;
+    width: 100%;
   }
 }

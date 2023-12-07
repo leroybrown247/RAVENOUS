@@ -32,8 +32,6 @@ const search = async (terms, location, sortBy) => {
                 state: business.location.state,
                 zipCode: business.location.zip_code,
                 category: business.categories[0].title,
-                  // .map((category) => category.title)
-                  // .join(", "),
                 rating: business.rating,
                 reviewCount: business.review_count,
               };
@@ -42,7 +40,7 @@ const search = async (terms, location, sortBy) => {
 
       return businesses;
     } else {
-      const errorResponse = await response.text(); // Get the actual response content
+      const errorResponse = await response.text();
       console.error("Error fetching data from Yelp API:", errorResponse);
       throw new Error("Error fetching data from Yelp API");
     }
